@@ -1,0 +1,12 @@
+# Dependencies
+/node_modules/
+
+# Build files
+/dist/
+
+# Build Artifacts
+/coverage/
+/docs/
+
+# Log files
+yarn-error.log

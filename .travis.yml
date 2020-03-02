@@ -1,0 +1,31 @@
+sudo: false
+language: node_js
+# Versions of node to test
+node_js:
+  - '10'
+  - '11'
+  - '12'
+  - '13'
+# Only run for changes to these branches.
+# There is no need to test branches since builds are created automatically from pull requests.
+branches:
+  only:
+    - master
+    - /^greenkeeper/.*$/
+# Keep cache
+cache:
+  yarn: true
+  directories:
+    - node_modules
+script:
+  # Run tests to ensure build is reliable
+  - yarn test
+after_success:
+  # Generate docs
+  - yarn doc
+  # Publish docs to gh-pages
+  - yarn doc:publish
+  # Publish code coverage report from running tests
+  - yarn cov:publish
+  # Publish using https://github.com/semantic-release/semantic-release
+  - yarn release

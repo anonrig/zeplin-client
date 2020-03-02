@@ -1,0 +1,46 @@
+{
+  "cSpell.words": [
+    "ESNEXT",
+    "Greenkeeper",
+    "Interop",
+    "codecov",
+    "commitlint",
+    "huskyrc",
+    "jestconfig",
+    "lcov",
+    "prettierrc",
+    "releaserc",
+    "toolchain",
+    "typedoc",
+    "typeparam"
+  ],
+  "search.exclude": {
+    "**/dist": true,
+    "**/coverage": true,
+    "**/documentation": true
+  },
+  "editor.tabSize": 2,
+  "editor.formatOnSave": true,
+  "editor.detectIndentation": false,
+  "eslint.enable": true,
+  "eslint.autoFixOnSave": true,
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    { "language": "typescript", "autoFix": true },
+    { "language": "typescriptreact", "autoFix": true }
+  ],
+  "[javascript]": {
+    "editor.formatOnSave": true
+  },
+  "[typescript]": {
+    "editor.formatOnSave": true
+  },
+  "eslint.provideLintTask": true,
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  }
+}
