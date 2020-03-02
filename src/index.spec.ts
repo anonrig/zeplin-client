@@ -1,8 +1,10 @@
 import Client from './';
 
 describe('client', () => {
-  it('returns a message with the name parameter', () => {
+  it('initialize properly', () => {
     const client = new Client('id', 'secret', 'redirect-uri');
-    expect(client).toBe(Object);
+    expect(client['clientId']).toEqual('id');
+    expect(client['clientSecret']).toEqual('secret');
+    expect(client['redirectUri']).toEqual('redirect-uri');
   });
 });
