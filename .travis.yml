@@ -14,18 +14,18 @@ branches:
     - /^greenkeeper/.*$/
 # Keep cache
 cache:
-  yarn: true
+  npm: true
   directories:
     - node_modules
 script:
   # Run tests to ensure build is reliable
-  - yarn test
+  - npm run test
 after_success:
   # Generate docs
-  - yarn doc
+  - npm run doc
   # Publish docs to gh-pages
-  - yarn doc:publish
+  - npm run doc:publish
   # Publish code coverage report from running tests
-  - yarn cov:publish
+  - npm run cov:publish
   # Publish using https://github.com/semantic-release/semantic-release
-  - yarn release
+  - npm run release
