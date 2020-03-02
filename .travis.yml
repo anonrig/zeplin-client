@@ -1,4 +1,5 @@
-sudo: false
+root:
+  os: linux
 language: node_js
 # Versions of node to test
 node_js:
@@ -19,13 +20,13 @@ cache:
     - node_modules
 script:
   # Run tests to ensure build is reliable
-  - npm run test
+  - yarn test
 after_success:
   # Generate docs
-  - npm run doc
+  - yarn doc
   # Publish docs to gh-pages
-  - npm run doc:publish
+  - yarn doc:publish
   # Publish code coverage report from running tests
-  - npm run cov:publish
+  - yarn cov:publish
   # Publish using https://github.com/semantic-release/semantic-release
-  - npm run release
+  - yarn release
