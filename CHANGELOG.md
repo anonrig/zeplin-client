@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/relevantfruit/zeplin-client/compare/v1.1.0...v1.2.0) (2020-03-15)
+
+
+### Features
+
+* **sections:** add endpoint to get sections of a project ([1118b4f](https://github.com/relevantfruit/zeplin-client/commit/1118b4fb316d354e3303d8b38d3955c68f2e962e))
+
 # [1.1.0](https://github.com/relevantfruit/zeplin-client/compare/v1.0.0...v1.1.0) (2020-03-15)
 
 
