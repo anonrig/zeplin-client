@@ -5,6 +5,7 @@
     "Interop",
     "codecov",
     "commitlint",
+    "emotar",
     "huskyrc",
     "jestconfig",
     "lcov",
