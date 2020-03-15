@@ -1,6 +1,6 @@
 import axios, { AxiosInstance, AxiosResponse } from 'axios'
 import * as tsTypes from './types'
-import { Header, Member, Pagination, Project, Screen, Token, User } from './types'
+import { Header, Member, Pagination, Project, Screen, Section, Token, User } from './types'
 
 export const Types = tsTypes
 
@@ -141,6 +141,28 @@ export default class Client {
   ): Promise<[Screen]> {
     const response: AxiosResponse<[Screen]> = await this.requester.get<[Screen]>(
       `/projects/${projectId}/screens`,
+      {
+        headers: this.prepareHeaders(accessToken),
+        params: pagination
+      }
+    )
+
+    return response.data
+  }
+
+  /**
+   * Get sections of a given project.
+   * @param accessToken Access token
+   * @param projectId Project id
+   * @param pagination Pagination fields including limit and offset.
+   */
+  async getProjectScreenSections(
+    accessToken: string,
+    projectId: string,
+    pagination: Pagination
+  ): Promise<[Section]> {
+    const response: AxiosResponse<[Section]> = await this.requester.get<[Section]>(
+      `/projects/${projectId}/screen_sections`,
       {
         headers: this.prepareHeaders(accessToken),
         params: pagination
