@@ -30,13 +30,13 @@ Make sure to install all the [recommended extensions](https://code.visualstudio.
 Install package using `npm i --save zeplin-client`
 
 ```typescript
-import Client, { Types } from 'zeplin-client';
+import Client, { Types } from 'zeplin-client'
 
-const client = new Client('app-id', 'app-secret', 'https://api.relevantfruit.com');
+const client = new Client('app-id', 'app-secret', 'https://api.relevantfruit.com')
 
-const pagination: Types.Pagination = { limit: '100', offset: '0' };
+const pagination: Types.Pagination = { limit: 100, offset: 0 }
 client
   .getScreens('my-access-token', pagination)
   .then(console.log)
-  .catch(console.error);
+  .catch(console.error)
 ```
