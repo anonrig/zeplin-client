@@ -37,12 +37,12 @@ export enum Platform {
   web = 'web',
   ios = 'ios',
   android = 'android',
-  macos = 'macos'
+  macos = 'macos',
 }
 
 export enum Status {
   active = 'active',
-  archived = 'archived'
+  archived = 'archived',
 }
 
 export interface StyleGuide {

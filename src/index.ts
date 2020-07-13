@@ -19,7 +19,7 @@ export default class Client {
   constructor(clientId: string, clientSecret: string, redirectUri: string) {
     this.requester = axios.create({
       baseURL: 'https://api.zeplin.dev/v1',
-      timeout: 3000
+      timeout: 3000,
     })
     this.clientId = clientId
     this.clientSecret = clientSecret
@@ -37,7 +37,7 @@ export default class Client {
       code,
       client_id: this.clientId,
       client_secret: this.clientSecret,
-      redirect_uri: this.redirectUri
+      redirect_uri: this.redirectUri,
     })
 
     return response.data
@@ -54,7 +54,7 @@ export default class Client {
       refresh_token: token,
       client_id: this.clientId,
       client_secret: this.clientSecret,
-      redirect_uri: this.redirectUri
+      redirect_uri: this.redirectUri,
     })
 
     return response.data
@@ -67,7 +67,7 @@ export default class Client {
    */
   async getCurrentUser(accessToken: string): Promise<User> {
     const response: AxiosResponse<User> = await this.requester.get<User>('/users/me', {
-      headers: this.prepareHeaders(accessToken)
+      headers: this.prepareHeaders(accessToken),
     })
 
     return response.data
@@ -82,7 +82,7 @@ export default class Client {
   async getProjects(accessToken: string, pagination: Pagination): Promise<[Project]> {
     const response: AxiosResponse<[Project]> = await this.requester.get<[Project]>('/projects', {
       headers: this.prepareHeaders(accessToken),
-      params: pagination
+      params: pagination,
     })
 
     return response.data
@@ -98,7 +98,7 @@ export default class Client {
     const response: AxiosResponse<Project> = await this.requester.get<Project>(
       `/projects/${projectId}`,
       {
-        headers: this.prepareHeaders(accessToken)
+        headers: this.prepareHeaders(accessToken),
       }
     )
 
@@ -121,7 +121,7 @@ export default class Client {
       `/projects/${projectId}/members`,
       {
         headers: this.prepareHeaders(accessToken),
-        params: pagination
+        params: pagination,
       }
     )
 
@@ -143,7 +143,7 @@ export default class Client {
       `/projects/${projectId}/screens`,
       {
         headers: this.prepareHeaders(accessToken),
-        params: pagination
+        params: pagination,
       }
     )
 
@@ -165,7 +165,7 @@ export default class Client {
       `/projects/${projectId}/screen_sections`,
       {
         headers: this.prepareHeaders(accessToken),
-        params: pagination
+        params: pagination,
       }
     )
 
@@ -178,7 +178,7 @@ export default class Client {
    */
   private prepareHeaders(accessToken: string): Header {
     return {
-      Authorization: `Bearer ${accessToken}`
+      Authorization: `Bearer ${accessToken}`,
     }
   }
 }
