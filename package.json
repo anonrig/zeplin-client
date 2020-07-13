@@ -1,6 +1,6 @@
 {
   "name": "zeplin-client",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Zeplin NodeJS Client with OAuth",
   "main": "dist/main/index.js",
   "module": "dist/module/index.js",
