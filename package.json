@@ -63,7 +63,7 @@
     "semantic-release": "^17.0.7",
     "ts-jest": "^26.1.2",
     "ts-node": "^8.9.1",
-    "typedoc": "^0.17.6",
+    "typedoc": "^0.20.28",
     "typedoc-plugin-nojekyll": "^1.0.1",
     "typescript": "^3.8.3"
   }
